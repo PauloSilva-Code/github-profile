@@ -17,6 +17,11 @@ export const WrapperInfoUser = styled.div`
 export const WrapperStatusCount = styled.div`
   display: flex;
   align-items: flex-start;
+
+  div {
+    margin: 8px;
+    text-align: center;
+  }
 `;
 
 export const WrapperUsername = styled.div`
