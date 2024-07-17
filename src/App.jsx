@@ -1,16 +1,19 @@
 import GlobalStyle from "./assets/Global/globalStyles";
 import Layout from "./components/Layout";
 import Profile from "./components/Profile";
+import RepoList from "./components/RepoList";
+import GitHubProvider from "./providers/github-provider";
 
 function App() {
   return (
     <main>
-      <Layout>
-        <Profile />
-        <div>Repositories</div>
-        <div>Starred</div>
-      </Layout>
-      <GlobalStyle />
+      <GitHubProvider>
+        <Layout>
+          <Profile />
+          <RepoList />
+        </Layout>
+        <GlobalStyle />
+      </GitHubProvider>
     </main>
   );
 }
