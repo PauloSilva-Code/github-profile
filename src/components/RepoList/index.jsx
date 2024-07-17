@@ -1,5 +1,5 @@
 import RepoItem from "../RepoItem";
-import * as S from "./styled";
+import * as S from "./styles";
 
 const RepoList = () => {
   return (
