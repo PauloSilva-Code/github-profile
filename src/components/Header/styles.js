@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
+  gap: 10px;
   width: 50%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 10px;
 
@@ -12,7 +13,6 @@ export const Wrapper = styled.div`
     width: 100%;
     border-radius: 4px;
     border: 1px solid #ccc;
-    margin-right: 10px;
     font-weight: 500;
   }
 

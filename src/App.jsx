@@ -1,20 +1,22 @@
-import GlobalStyle from "./assets/Global/globalStyles";
 import Layout from "./components/Layout";
 import Profile from "./components/Profile";
 import RepoList from "./components/RepoList";
-import GitHubProvider from "./providers/github-provider";
+import useGithub from "./hooks/github-hooks";
 
 function App() {
+  const { githubState } = useGithub();
+
   return (
-    <main>
-      <GitHubProvider>
-        <Layout>
+    <Layout>
+      {githubState.hasUser ? (
+        <>
           <Profile />
           <RepoList />
-        </Layout>
-        <GlobalStyle />
-      </GitHubProvider>
-    </main>
+        </>
+      ) : (
+        <p>Busque um usuário</p>
+      )}
+    </Layout>
   );
 }
 
