@@ -1,11 +1,18 @@
+import * as S from "./styles";
+
 const RepoItem = ({ name, linkToRepo, fullName }) => {
   return (
-    <div>
-      <h2>{name}</h2>
-      <h4>full name: </h4>
-      <a href={linkToRepo} target="_blank" rel="noopener noreferrer"></a>
-      {fullName}
-    </div>
+    <S.Wrapper>
+      <S.WrapperTitle>{name}</S.WrapperTitle>
+      <S.WrapperFullName>full name: </S.WrapperFullName>
+      <S.WrapperLink
+        href={linkToRepo}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {fullName}
+      </S.WrapperLink>
+    </S.Wrapper>
   );
 };
 
