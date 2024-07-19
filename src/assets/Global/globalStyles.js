@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     font-family: "Quicksand", sans-serif;
+    background-color: #141A26;
+    color: #D5DFF2;
   }
 `;
 
